@@ -32,6 +32,8 @@ Account on [DigitalOcean](https://www.digitalocean.com/)
 
 ### Deploy dockercoins and check the status
 
+`cd dockercoins`
+
 `docker deploy dockercoins`
 
 `docker service ls`
