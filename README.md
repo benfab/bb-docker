@@ -3,7 +3,7 @@ Demo during the Brown Bag session about Docker
 
 ### Prerequisites
 
-Docker engine and docker-machine installed
+Docker engine and docker-machine installed on Ubuntu 16.04 LTS
 
 Account on [DigitalOcean](https://www.digitalocean.com/)
 
@@ -84,6 +84,13 @@ With the flags specified, 2 tasks will be updated at a time with a delay of 10 s
 ### check if the tasks have been rescheduled
 
 `docker service ps dockercoins_hasher`
+
+### delete the cluster
+
+`cd ..`
+
+`./delete-swarm.sh`
+
 
 
 
