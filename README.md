@@ -67,15 +67,19 @@ Account on DigitalOcean
 
 `nslookup tasks.dockercoins_worker`
 
-### Update the service dockercoins_worker with 2 tasks updates at a time and a delay of 10 seconds between the task updates
+### Update the service dockercoins_worker  
+
+With the flags specified, 2 tasks will be updated at a time with a delay of 10 seconds between the tasks updates
 
 `docker service update dockercoins_worker --update-parallelism 2 --update-delay 10s --image benfab/dockercoins_worker:v0.1`
 
-### Drain a node a check if the tasks have been rescheduled 
+### Drain a node  
 
 `docker node ps <node-name>`
 
 `docker node update <node-name> --availability drain`
+
+### check if the tasks have been rescheduled
 
 `docker service ps dockercoins_hasher`
 
