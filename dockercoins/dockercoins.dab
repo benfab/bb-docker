@@ -1,0 +1,53 @@
+{
+  "Services": {
+    "hasher": {
+      "Image": "benfab/hasher@sha256:615d9ed92663d68d1e575e572712d24bfdef389e8965c6f11fb4492173e497ae", 
+      "Networks": [
+        "default"
+      ], 
+      "Ports": [
+        {
+          "Port": 80, 
+          "Protocol": "tcp"
+        }
+      ]
+    }, 
+    "redis": {
+      "Image": "redis@sha256:5af2446f774075f2b5bc14738368dc111c357c2a11dd304a90b098e27ff1a50e", 
+      "Networks": [
+        "default"
+      ]
+    }, 
+    "rng": {
+      "Image": "benfab/rng@sha256:c062e20633b7a5c714652a0ffa11366aad573bddd888c5338a8f9007c2e433c2", 
+      "Networks": [
+        "default"
+      ], 
+      "Ports": [
+        {
+          "Port": 80, 
+          "Protocol": "tcp"
+        }
+      ]
+    }, 
+    "webui": {
+      "Image": "benfab/webui@sha256:8cc46b5f361a4178e7caf5bf73ae7c0843773b60add2180190a288c4ee68cdaa", 
+      "Networks": [
+        "default"
+      ], 
+      "Ports": [
+        {
+          "Port": 80, 
+          "Protocol": "tcp"
+        }
+      ]
+    }, 
+    "worker": {
+      "Image": "benfab/worker@sha256:19b5d8f65e13333a0b1580c141143f5352b9e2208baadb840610fc2ff30f02f5", 
+      "Networks": [
+        "default"
+      ]
+    }
+  }, 
+  "Version": "0.1"
+}
