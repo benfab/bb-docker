@@ -5,7 +5,7 @@ Demo during the Brown Bag session about Docker
 
 Docker engine and docker-machine installed
 
-Account on DigitalOcean
+Account on [DigitalOcean](https://www.digitalocean.com/)
 
 ## Steps to run the demo
 
