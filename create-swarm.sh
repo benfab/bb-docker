@@ -5,7 +5,7 @@
 # - 5 worker nodes
 # - 5 replicas for the test service
 
-DRIVER="digitalocean"
+DRIVER="vmware-workstation"
 NBR_MANAGER=3
 NBR_WORKER=5
 NBR_REPLICA=5
@@ -87,8 +87,8 @@ while [ "$#" -gt 0 ]; do
 done
 
 # Value of driver parameter's value must be among "azure", "digitalocean", "amazonec2", "virtualbox" (if no value is provided, "virtualbox" driver is used)
-if [ "$DRIVER" != "virtualbox" -a "$DRIVER" != "digitalocean" -a "$DRIVER" != "amazonec2"  -a "$DRIVER" != "azure" ];then
-  error "driver value must be among azure, digitalocean, amazonec2, virtualbox"
+if [ "$DRIVER" != "virtualbox" -a "$DRIVER" != "vmware-workstation" -a "$DRIVER" != "digitalocean" -a "$DRIVER" != "amazonec2"  -a "$DRIVER" != "azure" ];then
+  error "driver value must be among azure, digitalocean, amazonec2, virtualbox, vmware-workstation"
 fi
 
 # No additional parameters needed for virtualbox driver
