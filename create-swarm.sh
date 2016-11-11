@@ -5,7 +5,7 @@
 # - 5 worker nodes
 # - 5 replicas for the test service
 
-DRIVER="vmware-workstation"
+DRIVER="vmwareworkstation"
 NBR_MANAGER=3
 NBR_WORKER=5
 NBR_REPLICA=5
@@ -87,7 +87,7 @@ while [ "$#" -gt 0 ]; do
 done
 
 # Value of driver parameter's value must be among "azure", "digitalocean", "amazonec2", "virtualbox" (if no value is provided, "virtualbox" driver is used)
-if [ "$DRIVER" != "virtualbox" -a "$DRIVER" != "vmware-workstation" -a "$DRIVER" != "digitalocean" -a "$DRIVER" != "amazonec2"  -a "$DRIVER" != "azure" ];then
+if [ "$DRIVER" != "virtualbox" -a "$DRIVER" != "vmwareworkstation" -a "$DRIVER" != "digitalocean" -a "$DRIVER" != "amazonec2"  -a "$DRIVER" != "azure" ];then
   error "driver value must be among azure, digitalocean, amazonec2, virtualbox, vmware-workstation"
 fi
 
@@ -95,6 +95,12 @@ fi
 if [ "$DRIVER" == "virtualbox" ]; then
   echo "-> about to create a swarm with $NBR_MANAGER manager(s) and $NBR_WORKER workers on $DRIVER machines"
 fi
+# No additional parameters needed for vmwareworkstation at his time
+if [ "$DRIVER" == "virtualbox" ]; then
+  echo "-> about to create a swarm with $NBR_MANAGER manager(s) and $NBR_WORKER workers on $DRIVER machines"
+fi
+
+
 
 # Make sure mandatory parameter for digitalocean driver
 if [ "$DRIVER" == "digitalocean" ]; then
