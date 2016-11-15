@@ -1,13 +1,13 @@
 # bb-docker
 Demo during the Brown Bag session about Docker
 
-### Prerequisites
+## Prerequisites
 
-## Using Digital Ocean
+### Using Digital Ocean
 Docker engine and docker-machine installed on Ubuntu 16.04 LTS
 Account on [DigitalOcean](https://www.digitalocean.com/)
 
-##using vmware workstation on Windows
+### using vmware workstation on Windows
 
 https://community.emc.com/blogs/bottk/2016/11/15/running-docker-machine-and-docker-swarm-mode-on-vmware-workstation
 
@@ -17,9 +17,9 @@ https://community.emc.com/blogs/bottk/2016/11/15/running-docker-machine-and-dock
 `git clone https://github.com/benfab/bb-docker.git`
 
 ### Deploy the Swarm cluster
-##Digital Ocean
+### Digital Ocean
 `./create-swarm.sh --driver digitalocean --digitalocean_token <token> --manager 3 --worker 5`
-## Windows / VMware Workstation
+### Windows / VMware Workstation
 `./create-swarm.sh --driver vmwareworkstation --manager 3 --worker 5`
 ### Check the Swarm cluster
 
