@@ -98,8 +98,8 @@ fi
 
 # Make sure mandatory parameter for digitalocean driver
 if [ "$DRIVER" == "digitalocean" ]; then
-  ADDITIONAL_PARAMS="--digitalocean-access-token=${DO_TOKEN} --digitalocean-region=lon1 --digitalocean-size=1gb --digitalocean-image=ubuntu-14-04-x64 --engine-install-url=https://test.docker.com"
-  echo "->  about to create a swarm with $NBR_MANAGER manager(s) and $NBR_WORKER workers on $DRIVER machines (lon1 / 1gb / Ubuntu 14.04)"
+  ADDITIONAL_PARAMS="--digitalocean-access-token=${DO_TOKEN} --digitalocean-region=lon1 --digitalocean-size=1gb --digitalocean-image=ubuntu-16-04-x64"
+  echo "->  about to create a swarm with $NBR_MANAGER manager(s) and $NBR_WORKER workers on $DRIVER machines (lon1 / 1gb / Ubuntu 16.04)"
 fi
 
 # Make sure mandatory parameter for amazonec2 driver
