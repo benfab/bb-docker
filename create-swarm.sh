@@ -93,6 +93,7 @@ fi
 
 # No additional parameters needed for virtualbox driver
 if [ "$DRIVER" == "virtualbox" ]; then
+  ADDITIONAL_PARAMS="--engine-opt experimental=true"  
   echo "-> about to create a swarm with $NBR_MANAGER manager(s) and $NBR_WORKER workers on $DRIVER machines"
 fi
 
