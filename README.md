@@ -5,14 +5,18 @@ Demo during the Brown Bag session about Docker
 
 Docker engine and docker-machine installed on Ubuntu 16.04 LTS
 
-Account on [DigitalOcean](https://www.digitalocean.com/)
+Virtualbox installed on your laptop or an account on [DigitalOcean](https://www.digitalocean.com/)
 
 ## Steps to run the demo
 
 ### Clone the repo
 `git clone https://github.com/benfab/bb-docker.git`
 
-### Deploy the Swarm cluster
+### Deploy the Swarm Cluster  
+# Virtualbox
+`./create-swarm.sh --driver virtualbox --manager 3 --worker 1`
+
+# Digitalocen
 `./create-swarm.sh --driver digitalocean --digitalocean_token <token> --manager 3 --worker 5`
 
 ### Check the Swarm cluster
