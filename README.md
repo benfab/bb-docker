@@ -38,7 +38,7 @@ Virtualbox installed on your laptop or an account on [DigitalOcean](https://www.
 
 `cd dockercoins`
 
-`docker deploy dockercoins`
+`docker stack deploy --bundle-file dockercoins.dab dockercoins`
 
 `docker service ls`
 
