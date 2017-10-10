@@ -16,7 +16,7 @@ Virtualbox installed on your laptop or an account on [DigitalOcean](https://www.
 # Virtualbox
 `./create-swarm.sh --driver virtualbox --manager 3 --worker 1`
 
-# Digitalocen
+# Digitalocean
 `./create-swarm.sh --driver digitalocean --digitalocean_token <token> --manager 3 --worker 5`
 
 ### Check the Swarm cluster
